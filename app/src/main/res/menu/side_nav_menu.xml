@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/profile_icon"
+        android:title="Profile" />
+
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/info_icon_foreground"
+        android:title="Github Repo" />
+
+    <item
+        android:id="@+id/website"
+        android:icon="@drawable/web_icon"
+        android:title="Website" />
+
+    <item
+        android:id="@+id/contact_side_nav"
+        android:icon="@drawable/phone_icon"
+        android:title="Contact Us" />
+
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/close_icon_foreground"
+        android:title="Logout" />
+
+</menu>

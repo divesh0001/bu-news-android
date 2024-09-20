@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="20dp"
+    tools:ignore="HardcodedText">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        tools:context=".PostFragment">
+
+        <TextView
+            android:id="@+id/post_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Post Your own News!"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/post_title"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/backgroundColorDark" />
+
+        <TextView
+            android:id="@+id/what_to_post_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/post_title"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/post_description" />
+
+        <View
+            android:id="@+id/what_to_post_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/what_to_post_tv"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/backgroundColorDark" />
+
+        <EditText
+            android:id="@+id/post_title_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/what_to_post_divider"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/backgroundColorDark"
+            android:hint="Heading"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/post_description_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/post_title_et"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/backgroundColorDark"
+            android:gravity="bottom"
+            android:hint="Description"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:minLines="6"
+            android:scrollbars="vertical" />
+
+        <LinearLayout
+            android:id="@+id/categories_spinner_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/post_description_et"
+            android:layout_margin="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Category:"
+                android:textSize="14sp" />
+
+            <Spinner
+                android:id="@+id/categories_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/categories_spinner_ll"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/backgroundColorDark" />
+
+
+        <Button
+            android:id="@+id/post_image_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/categories_spinner_ll"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Choose Image"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/selected_image_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/post_image_btn"
+            android:text="No image selected"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:id="@+id/preview_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selected_image_tv"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="Preview Image"
+            android:maxHeight="100dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/post_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/preview_image"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:paddingHorizontal="50dp"
+            android:paddingVertical="10dp"
+            android:text="Post"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</ScrollView>

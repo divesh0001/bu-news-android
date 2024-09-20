@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:ignore="HardcodedText">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".HomeFragment">
+
+        <RelativeLayout
+            android:id="@+id/greetingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/greetingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Greetings"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/greetingUserText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/greetingText"
+                android:text="Username"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/greetingUserText"
+                android:layout_marginTop="5dp"
+                android:text="Day, XX Month" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="50dp"
+                android:layout_toEndOf="@id/greetingText">
+
+                <ImageView
+                    android:id="@+id/weatherIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="Weather Icon"
+                    app:tint="@color/textColor" />
+
+                <TextView
+                    android:id="@+id/weatherDescriptionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/weatherIcon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Loading..."
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/greetingDivider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/greetingLayout"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/backgroundColorDark" />
+
+        <TextView
+            android:id="@+id/topNewsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/greetingDivider"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Top News"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/news_rv_home"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/topNewsText"
+            android:layout_marginTop="10dp"
+            android:nestedScrollingEnabled="false"
+            android:scrollbars="horizontal" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topNewsText"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="100dp"
+            android:indeterminateTint="@color/textColorHint"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/newsDivider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/news_rv_home"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/backgroundColorDark" />
+
+        <TextView
+            android:id="@+id/subscribedNewsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newsDivider"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Subscribed News"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/noSubscribedNewsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subscribedNewsText"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/subscribedNews_rv_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/noSubscribedNewsText"
+            android:layout_marginTop="10dp"
+            android:nestedScrollingEnabled="false" />
+
+        <Button
+            android:id="@+id/subscribeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subscribedNews_rv_home"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="15dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:text="Subscribe"
+            android:textColor="@color/white" />
+
+        <View
+            android:id="@+id/subscribedNewsDivider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/subscribeButton"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/backgroundColorDark" />
+
+    </RelativeLayout>
+</ScrollView>

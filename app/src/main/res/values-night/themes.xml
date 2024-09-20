@@ -1,0 +1,18 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.BUNewsAndroidDark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/backgroundColor</item>
+
+        <item name="android:background">@color/backgroundColor</item>
+        <item name="android:backgroundTint">@color/backgroundColor</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textColorHint">@color/textColorHint</item>
+
+    </style>
+
+</resources>

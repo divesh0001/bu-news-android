@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:backgroundTint="@null"
+        app:tabBackground="@color/backgroundColorDark"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@null"
+        app:tabMode="fixed"
+        app:tabRippleColor="@null"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextAppearance="@style/NavigationTabTextAppearance" />
+
+    <View
+        android:id="@+id/lineDivider1"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_below="@+id/tab_layout"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorPrimaryDark" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/lostFoundViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lineDivider1" />
+
+</RelativeLayout>

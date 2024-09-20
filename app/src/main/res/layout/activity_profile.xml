@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.BUNewsAndroidDark"
+    tools:context=".ProfileActivity">
+
+    <RelativeLayout
+        android:id="@+id/profile_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/back_button"
+            android:src="@drawable/arrow_back_white"
+            app:tint="@color/textColor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/back_button"
+            android:text="@string/account_settings"
+            android:textAlignment="textEnd"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/profile_header"
+        android:layout_marginHorizontal="8dp"
+        android:backgroundTint="@color/colorPrimaryDark" />
+
+    <LinearLayout
+        android:id="@+id/profile_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_header"
+        android:layout_marginVertical="20dp"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@mipmap/default_profile_image"
+            app:civ_border_width="0dp" />
+
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Anonymous"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/backgroundColorDark" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_body"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="15dp">
+
+        <ImageView
+            android:id="@+id/mini_profile_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/profile_icon"
+            android:src="@drawable/profile_icon"
+            app:tint="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/full_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/mini_profile_icon"
+            android:gravity="center"
+            android:text="@string/full_name"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/full_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/full_name_label"
+            android:text="@string/not_provided"
+            android:textAlignment="textEnd"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_divider1"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@id/user_info"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/backgroundColorDark" />
+
+    <RelativeLayout
+        android:id="@+id/user_email_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_divider1"
+        android:layout_marginTop="15dp"
+        android:paddingHorizontal="15dp">
+
+        <ImageView
+            android:id="@+id/mini_email_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/email_icon"
+            android:src="@drawable/email_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/mini_email_icon"
+            android:gravity="center"
+            android:text="@string/student_email_text"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/email_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="38dp"
+            android:gravity="center"
+            android:text="@string/not_provided"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_divider2"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@id/user_email_info"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/backgroundColorDark" />
+
+    <RelativeLayout
+        android:id="@+id/user_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_divider2"
+        android:layout_marginTop="15dp"
+        android:paddingHorizontal="15dp">
+
+        <ImageView
+            android:id="@+id/mini_contact_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="Contact Icon"
+            android:src="@drawable/phone_icon"
+            app:tint="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/contact_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/mini_contact_icon"
+            android:gravity="center"
+            android:text="Contact"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/contact_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/contact_label"
+            android:text="@string/not_provided"
+            android:textAlignment="textEnd"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_divider3"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@id/user_contact"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/backgroundColorDark" />
+
+    <RelativeLayout
+        android:id="@+id/user_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_divider3"
+        android:layout_marginTop="15dp"
+        android:paddingHorizontal="15dp">
+
+        <ImageView
+            android:id="@+id/mini_address_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="Address Icon"
+            android:src="@drawable/address_icon"
+            app:tint="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/address_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/mini_address_icon"
+            android:gravity="center"
+            android:text="City or Zip Code"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/address_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/address_label"
+            android:text="@string/not_provided"
+            android:textAlignment="textEnd"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_divider4"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@id/user_address"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/backgroundColorDark" />
+
+    <Button
+        android:id="@+id/edit_profile_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_divider4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingHorizontal="20dp"
+        android:text="@string/edit_profile_text"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/delete_profile_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_profile_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:clickable="true"
+        android:text="Delete Profile"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
